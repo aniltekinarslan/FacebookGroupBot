@@ -240,7 +240,7 @@ namespace ReCaptchaV2
 
             UpdateUserState(AccountState.AddMainUser);
 
-            _driver.Navigate().GoToUrl("https://mbasic.facebook.com/" + mainForm.mainUser.ProfileUserName);
+            _driver.Navigate().GoToUrl("https://mbasic.facebook.com/" + mainForm.mainUser.ProfileID);
             Thread.Sleep(2000);
 
             var div = _driver.FindElement(By.Id("objects_container"));
@@ -291,7 +291,7 @@ namespace ReCaptchaV2
 
             var confirmLinks = new List<string>();
 
-            _driver.Navigate().GoToUrl("https://mbasic.facebook.com/notifications.php");
+            _driver.Navigate().GoToUrl("https://mbasic.facebook.com/notifications.php?more");
 
             var tables = _driver.FindElements(By.TagName("table"));
             if (tables.Count == 0)
