@@ -316,9 +316,10 @@ namespace ReCaptchaV2
 
             UpdateUserState(MainAccountState.AddToGroups);
 
-            try
+
+            foreach (var group in GroupList)
             {
-                foreach (var group in GroupList)
+                try
                 {
                     foreach (var user in mainForm.AccChromeMap)
                     {
@@ -335,6 +336,9 @@ namespace ReCaptchaV2
 
                         var div2 = _driver.FindElement(By.Id("objects_container"));
                         var checks = div2.FindElements(By.CssSelector("input[type='checkbox']"));
+                        if (checks.Count == 0)
+                            continue;
+
                         checks[0].Click();
 
                         var inviteBtns = div2.FindElements(By.CssSelector("input[type='submit']"));
@@ -344,12 +348,12 @@ namespace ReCaptchaV2
                     }
 
                     Thread.Sleep(2000);
-                }
 
-            }
-            catch (Exception e)
-            {
-                mainForm.WriteLog(AccountName, e.Message);
+                }
+                catch (Exception e)
+                {
+                    mainForm.WriteLog(AccountName, e.Message);
+                }
             }
 
             UpdateUserState(MainAccountState.AddedToGroups);
