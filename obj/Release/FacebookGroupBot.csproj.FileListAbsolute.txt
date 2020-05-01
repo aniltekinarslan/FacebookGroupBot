@@ -37,3 +37,4 @@ D:\Proje\FacebookGroupBot\FacebookGroupBot\obj\Release\FacebookGroupBot.exe.mani
 D:\Proje\FacebookGroupBot\FacebookGroupBot\obj\Release\FacebookGroupBot.application
 D:\Proje\FacebookGroupBot\FacebookGroupBot\obj\Release\FacebookGroupBot.exe
 D:\Proje\FacebookGroupBot\FacebookGroupBot\obj\Release\FacebookGroupBot.pdb
+D:\Proje\FacebookGroupBot\FacebookGroupBot\obj\Release\FacebookGroupBot.csprojResolveAssemblyReference.cache

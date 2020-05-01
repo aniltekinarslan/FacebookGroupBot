@@ -316,7 +316,7 @@ namespace ReCaptchaV2
 
             UpdateUserState(MainAccountState.AddToGroups);
 
-
+            int counter = 0;
             foreach (var group in GroupList)
             {
                 try
@@ -344,11 +344,11 @@ namespace ReCaptchaV2
                         var inviteBtns = div2.FindElements(By.CssSelector("input[type='submit']"));
                         inviteBtns[1].Click();
 
-                        Thread.Sleep(1000);
+                        if(counter++ % 15 == 0)
+                            Thread.Sleep(60000);
+                        else
+                            Thread.Sleep(10000);
                     }
-
-                    Thread.Sleep(2000);
-
                 }
                 catch (Exception e)
                 {
