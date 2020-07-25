@@ -51,7 +51,9 @@ namespace ReCaptchaV2
             ChromeOptions options = new ChromeOptions();
             //options.AddExtensions("fck.crx");
             options.AddArguments("--disable-web-security");
-            options.AddArgument("user-agent=Mozilla/5.0 (Android 9; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0");
+            //options.AddArgument("user-agent=Mozilla/5.0 (Android 9; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0");
+            options.AddArgument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36");
+            
             //options.AddArgument("headless");
             _driver = new ChromeDriver(options);
             //_driver.Manage().Window.Minimize();
@@ -316,7 +318,7 @@ namespace ReCaptchaV2
 
             UpdateUserState(MainAccountState.AddToGroups);
 
-            int counter = 0;
+            int counter = 1;
             foreach (var group in GroupList)
             {
                 try
@@ -345,9 +347,9 @@ namespace ReCaptchaV2
                         inviteBtns[1].Click();
 
                         if(counter++ % 15 == 0)
-                            Thread.Sleep(60000);
+                            Thread.Sleep(30000);
                         else
-                            Thread.Sleep(10000);
+                            Thread.Sleep(3000);
                     }
                 }
                 catch (Exception e)

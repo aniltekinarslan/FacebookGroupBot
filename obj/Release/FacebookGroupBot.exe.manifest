@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FacebookGroupBot.exe" size="33216">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FacebookGroupBot.exe" size="32256">
       <assemblyIdentity name="FacebookGroupBot" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4zn0AhR1m3Ce6H+frN9DvCfdNeBdMGacW3hLHk0gA5c=</dsig:DigestValue>
+        <dsig:DigestValue>xJfvCzLR+3uRxeidan2Z9uy3xZ14EpcF0fmrybhvADg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

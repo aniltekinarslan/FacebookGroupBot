@@ -55,7 +55,7 @@ namespace ReCaptchaV2
                 return;
             }
 
-            Thread.Sleep(randomize.Next(1000, 30000));
+            Thread.Sleep(randomize.Next(1000, 10000));
 
             ChromeOptions options = new ChromeOptions();
             //options.AddExtensions("fck.crx");
